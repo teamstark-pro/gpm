@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0F2A4A;      /* Deep Navy (Trust, Prestige) */
+  --color-primary-light: #1A3E6B;
+  --color-primary-dark: #071526;
+  
+  --color-secondary: #D4AF37;    /* Rich Gold (Excellence, Achievement) */
+  --color-secondary-light: #F3D261;
+  --color-secondary-dark: #A98C2C;
+  
+  --color-accent: #E34A33;       /* Crimson/Red (Energy, Action) */
+  
+  --color-surface: #FFFFFF;
+  --color-background: #F8FAFC;   /* Slate 50 */
+  --color-background-alt: #F1F5F9; /* Slate 100 */
+
+  --color-text-main: #1E293B;    /* Slate 800 */
+  --color-text-muted: #64748B;   /* Slate 500 */
+  
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text-main);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    font-weight: 700;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .glass-dark {
+    background: rgba(15, 42, 74, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
